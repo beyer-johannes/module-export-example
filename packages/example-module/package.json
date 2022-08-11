@@ -1,0 +1,40 @@
+{
+  "name": "@example/example-module",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "test:unit": "vitest run src/runtime/**/*.test.*"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0-rc.6",
+    "pathe": "^0.3.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxt/test-utils-edge": "^3.0.0-rc.6-27651720.5dc864d",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "eslint": "latest",
+    "nuxt": "^3.0.0-rc.6",
+    "typescript": "^4.7.4",
+    "vitest": "^0.15.1"
+  }
+}

@@ -1,0 +1,1 @@
+# Nuxt module export example

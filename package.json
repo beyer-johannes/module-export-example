@@ -1,0 +1,15 @@
+{
+  "name": "example-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*/src",
+    "packages/*/e2e",
+    "packages/*",
+    "playground/*"
+  ],
+  "engines": {
+    "node": "^16.16.0",
+    "pnpm": ">=7"
+  },
+  "packageManager": "pnpm@7.5.0"
+}
